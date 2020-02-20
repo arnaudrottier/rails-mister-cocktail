@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <h1>Cocktails</h1>
+    <%= link_to new_cocktail_path do %>
+      <i class="fa fa-plus" aria-hidden="true"></i>
+    <% end %>
+  </div>
+    <% @cocktails.each do |cocktail| %>
+      <div class="card">
+        <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
+      </div>
+    <% end %>
+</div>
