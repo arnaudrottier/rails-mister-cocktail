@@ -1,9 +1,12 @@
 <div class="container">
-  <div class="row">
+    <div class="row">
     <h1>Cocktails</h1>
     <%= link_to new_cocktail_path do %>
       <i class="fa fa-plus" aria-hidden="true"></i>
     <% end %>
+    </div>
+  <div class="row">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
   </div>
     <% @cocktails.each do |cocktail| %>
       <div class="card">
@@ -14,6 +17,9 @@
           <%= image_tag "https://res.cloudinary.com/dqei8yqj0/image/upload/v1582269510/sara-cervera-zKJ-KVRW_wA-unsplash_ef0vac.jpg",
           alt: "alttext", height: 300, width: 400, crop: :fill %>
         <% end %>
-      </div>
+          </div>
     <% end %>
+      </div>
 </div>
+
+
