@@ -12,10 +12,10 @@
       <div class="card">
         <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
         <% if cocktail.photo.attached? %>
-        <%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+        <%= cl_image_tag cocktail.photo.key, height: 300, width: 350, crop: :fill %>
         <% else %>
           <%= image_tag "https://res.cloudinary.com/dqei8yqj0/image/upload/v1582269510/sara-cervera-zKJ-KVRW_wA-unsplash_ef0vac.jpg",
-          alt: "alttext", height: 300, width: 400, crop: :fill %>
+          alt: "alttext", height: 300, width: 350, crop: :fill %>
         <% end %>
           </div>
     <% end %>
