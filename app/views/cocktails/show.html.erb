@@ -1,7 +1,11 @@
 <h1><%= @cocktail.name %></h1>
-      <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
-  <%= link_to new_cocktail_path do %>
+<% if @cocktail.photo.attached? %>
+        <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+        <% else %>
+          <%= image_tag "https://res.cloudinary.com/dqei8yqj0/image/upload/v1582269510/sara-cervera-zKJ-KVRW_wA-unsplash_ef0vac.jpg",
+          alt: "alttext", height: 300, width: 400, crop: :fill %>  <%= link_to new_cocktail_path do %>
     <% end %>
+<% end %>
 <p><% @cocktail.doses.each do|dose| %>
   <p>
     <%= dose.description %> <%= dose.ingredient.name %>
